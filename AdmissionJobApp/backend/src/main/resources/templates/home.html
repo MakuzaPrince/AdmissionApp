@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Admission Portal</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+    <style>
+        /* Just adding a little style to make the language switcher and dynamic message stand out */
+        .language-switcher {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="page-title">Welcome to the Admission Portal</h1>
+
+    <!-- Dynamic Message Section -->
+    <div class="dynamic-message">
+        <p id="unique-message">Your journey to success starts here!</p>
+    </div>
+
+    <!-- Static Text Section -->
+    <p id="description">Apply to your dream institution or post admissions today!</p>
+
+    <div class="buttons">
+        <a href="/register" class="btn" id="register-btn">Sign Up</a>
+        <a href="/login" class="btn" id="login-btn">Sign In</a>
+    </div>
+
+    <!-- Language Switcher Button -->
+    <div class="language-switcher">
+        <button class="btn" id="language-btn" onclick="toggleLanguage()">Switch to French</button>
+    </div>
+</div>
+
+<script>
+    // Define message translations for both languages (English and French)
+    const messagesI18n = {
+        en: {
+            pageTitle: "Welcome to the Admission Portal",
+            uniqueMessage: "Your journey to success starts here!",
+            description: "Apply to your dream institution or post admissions today!",
+            registerBtn: "Sign Up",
+            loginBtn: "Sign In"
+        },
+        fr: {
+            pageTitle: "Bienvenue sur le portail d'admission",
+            uniqueMessage: "Votre parcours vers le succès commence ici !",
+            description: "Postulez à votre institution de rêve ou publiez des admissions aujourd'hui !",
+            registerBtn: "S'inscrire",
+            loginBtn: "Se connecter"
+        }
+    };
+
+    // Define dynamic messages for both languages
+    const messagesEn = [
+        "Shape your future with the best institutions!",
+        "Discover a wide range of academic opportunities!",
+        "Join our community of ambitious learners!",
+        "Your dream institution is just a step away!",
+        "Empowering you to achieve academic excellence!"
+    ];
+
+    const messagesFr = [
+        "Façonnez votre avenir avec les meilleures institutions !",
+        "Découvrez un large éventail d'opportunités académiques !",
+        "Rejoignez notre communauté d'apprenants ambitieux !",
+        "Votre institution de rêve est à un pas de vous !",
+        "Nous vous aidons à atteindre l'excellence académique !"
+    ];
+
+    // Set default language to English
+    let currentLanguage = 'en';
+
+    // Function to toggle language between English and French
+    function toggleLanguage() {
+        if (currentLanguage === 'en') {
+            switchLanguage('fr');
+            document.getElementById('language-btn').innerText = "Switch to English";
+        } else {
+            switchLanguage('en');
+            document.getElementById('language-btn').innerText = "Switch to French";
+        }
+    }
+
+    // Function to switch language
+    function switchLanguage(language) {
+        if (messagesI18n[language]) {
+            currentLanguage = language;  // Set current language to the selected one
+            // Update the page content based on the selected language
+            document.getElementById('page-title').innerText = messagesI18n[language].pageTitle;
+            document.getElementById('unique-message').innerText = messagesI18n[language].uniqueMessage;
+            document.getElementById('description').innerText = messagesI18n[language].description;
+            document.getElementById('register-btn').innerText = messagesI18n[language].registerBtn;
+            document.getElementById('login-btn').innerText = messagesI18n[language].loginBtn;
+
+            // Update the dynamic message array based on the selected language
+            currentMessages = (language === 'fr') ? messagesFr : messagesEn;
+
+            // Call function to update dynamic message display
+            changeMessage();
+        }
+    }
+
+    // Array to store the current dynamic messages based on language
+    let currentMessages = messagesEn;
+
+    let index = 0;
+
+    // Change message function to cycle through the dynamic messages
+    function changeMessage() {
+        const messageElement = document.getElementById('unique-message');
+        messageElement.classList.remove('fade');
+        setTimeout(() => {
+            messageElement.innerText = currentMessages[index];
+            messageElement.classList.add('fade');
+        }, 100); // Delay to allow the fade-out effect
+        index = (index + 1) % currentMessages.length;
+    }
+
+    // Change the dynamic message every 3 seconds
+    setInterval(changeMessage, 3000);
+
+    // Set the default language based on the initial page load (using browser's default or fallback to English)
+    window.onload = function () {
+        switchLanguage(currentLanguage);
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+html.index
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>software testing QA</title>
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="Container">
+            <a href="#"class="brand">UpWork.</a>
+            <ul class="nav-links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="hamburger active">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div id="hero">
+        <div class="Container">
+            <h1 class="heading-x1"><span id "hero-titles">Creative Agency</span></h1>
+            <a href="#" class="scroll-to-down"><i class="las la-arrow-down"></i>"</a>
+        </div>
+    </div>
+    <div style="padding-top: 1000px"
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
+==================================================================================================================================================
+
+css
+
+
+@import url('https://fonts.googleapis.com/css?family=plus+jakarta+sans:ital,wght@0,500,1,400&display=swap');
+:root{
+    --c-brand:#fac562;
+    --c-dark:var#333;
+    --c-body:#666;
+    --f-base:"Plus Jakarta Sans", sans-serif;
+    --n-height:100px;
+
+}
+*,*::after,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: var(--c-body);
+    font-family: var(--f-base);
+    line-height: 1.2;
+
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--c-dark);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.heading-xl{
+    font-size: clamp(44px, 10vw, 130px);
+    text-transform: uppercase;
+
+}
+.heading-1{
+    font-size: clamp(32px ,6vw ,54px);
+
+}
+.heading-2{
+    font-size: clamp(28px ,4vw ,36px);
+
+}
+.heading-3{
+    font-size: clamp(20px ,2vw ,18px);
+}
+a{
+    color: var(--c-dark);
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+
+}
+
+a:hover{
+    color: var(--c-brand);
+   
+}
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+ul{
+    list-style: none;
+}
+section{
+    padding: 140px 0;
+}
+.Container{
+max-width: 1140px;
+width: 100;
+margin: 0 auto;
+padding-left: 24px;
+padding-right: 24px;
+}
+.btn{
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--c-brand);
+    font-family: var(--f-base);
+    padding: 14px 34 px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    font-size: 14px;
+}
+.btn hover{
+    background-color: var(--c-brand);
+    color: white;
+}
+.navbar {
+    
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: var(--n-height);
+    display: flex;
+
+}
+.navbar .Container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand{
+    color: white;
+    font-size: 28px;
+}
+.nav-links{
+    display: flex;
+}
+.nav-links li:not(:last-child){
+    margin-right: 44px;
+
+}
+.nav-links li.active a {
+    box-shadow: 0 2px var(--c-brand);
+}
+.nav-links li a {
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;  
+}
+.nav-links li a:hover {
+    color: var(--c-brand);
+}
+.hamburger {
+    display: block;
+    cursor: pointer;
+    display: none;
+}
+.hamburger span {
+    display: block;
+    width: 34px;
+    height: 2px;
+    background-color: white;
+    margin: 8px auto;
+    transition: all 0.4s ease;
+}
+.hamburger.active span:nth-child(1){
+    transform: translate(5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+    transform: translate(-5px) rotate(-45deg);
+}
+.scrolled{
+    background-color: white;
+
+}
+.scrolled .brand{
+    color: var(--c-dark);
+}
+.scrolled.nav-links li a:hover{
+    color: var(--c-brand);
+}
+.scrolled.hamburger span{
+    background-color: var(--c-dark);
+}
+@media(max-width: 768px) {
+    .nav-links{
+        position: fixed;
+        top: var(--n-height);
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 24px;
+        transition: all 0.3s ease-in-out;
+        height: 0;
+        overflow: hidden;
+        justify-content: center;
+        background-color: white;
+
+    }
+    .nav-links li a {
+        color: var(--c-dark);
+    }
+    .nav-links.active{
+        height: 170px;
+    }
+    .nav-links li {
+        padding: 10px 0;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+#hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../images/back.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    text-align: center;    
+}
+#hero h1 {
+    color:white;
+    font-size: clamp(44px, 10vw, 100px);
+    text-transform: uppercase;
+    
+}
+var options =  {
+    strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+    typeSpeed: 50,
+  };
+  var typed = new Typed('',options)
+
+  @keyframes .scrolltodown {
+    0%{
+        transform:translateY(30%);
+opacity: 0;
+    }
+    50%{
+        transform:translateY(-30%);
+        opacity: 1;
+    }
+    100%{
+        transform:translateY(80%);
+        opacity: 0;
+    }
+    
+  }
+
+  .scroll-to-down{
+    width: 30px;
+    height: 60px;
+    display: grid;
+    place-content:center;
+    font: size 24px;
+    color:white;
+    border:2px solid rgba(255,255,255,0.2);
+    border: radius 10px;
+    position: absolute;
+    bottom: 50px;
+    left:50%;
+
+  }
+.scroll-to-down .las {
+    animation: scrolltodown 2s ease infinite
+
+============================================================================================================================================================
+js
+
+
+const navbar = document.querySelector('.navbar')
+const hamburger = document.querySelector('.hamburger')
+const navLinks = document.querySelector('.nav-linksr')
+window.addEventListener('scroll',()=>{
+    if(this.scrollY >= 100){
+        navbar.classList.add('scrolled')
+    }else{
+        navbar.classList.remove('scolled')
+    }
+})
+hamburger.addEventListener('click',() => {
+    navLinks.classList.toggle('active')
+    hamburger.classList.toggle('active')
+})
+var options =  {
+    strings: [
+        'Creative Agency',
+         'Typed JS is Awesome'],
+    typeSpeed: 50,
+    loop:true,
+    loopCount:Infinity,
+    typeSpeed:10,
+    backDelay:2000,
+  };
+  var typed = new Typed('#hero-titles',opt
+========================================================================================================================
+
+
+@import url('https://fonts.googleapis.com/css?family=plus+jakarta+sans:ital,wght@0,500,1,400&display=swap');
+:root{
+    --c-brand:#fac562;
+    --c-dark:var#333;
+    --c-body:#666;
+    --c-light:#f8f8f8;
+    --f-base:"Plus Jakarta Sans", sans-serif;
+    --n-height:100px;
+
+}
+*,*::after,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: var(--c-body);
+    font-family: var(--f-base);
+    line-height: 1.2;
+
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--c-dark);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.heading-xl{
+    font-size: clamp(44px, 10vw, 130px);
+    text-transform: uppercase;
+
+}
+.heading-1{
+    font-size: clamp(32px ,6vw ,54px);
+
+}
+.heading-2{
+    font-size: clamp(28px ,4vw ,36px);
+
+}
+.heading-3{
+    font-size: clamp(20px);
+}
+a{
+    color: var(--c-dark);
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+
+}
+
+a:hover{
+    color:var(--c-brand                                                                                                                                                                                                                                                                                          );
+   
+}
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+ul{
+    list-style: none;
+}
+section{
+    padding: 140px 0;
+}
+.Container{
+max-width: 1140px;
+width: 100;
+margin: 0 auto;
+padding-left: 24px;
+padding-right: 24px;
+}
+.btn{
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--c-brand);
+    font-family: var(--f-base);
+    padding: 14px 34 px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    font-size: 14px;
+}
+.btn hover{
+    background-color: var(--c-dark);
+    color: darkblue;
+}
+.navbar {
+    
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: var(--n-height);
+    display: flex;
+
+}
+.navbar .Container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand{
+    color: darkblue;
+    font-size: 28px;
+}
+.nav-links{
+    display: flex;
+}
+.nav-links li:not(:last-child){
+    margin-right: 44px;
+
+}
+.nav-links li.active a {
+    box-shadow: 0 2px var(--c-brand);
+}
+.nav-links li a {
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;  
+}
+.nav-links li a:hover {
+    color: var(--c-brand);
+}
+.hamburger {
+    display: block;
+    cursor: pointer;
+    display: none;
+}
+.hamburger span {
+    display: block;
+    width: 34px;
+    height: 2px;
+    background-color: white;
+    margin: 8px auto;
+    transition: all 0.4s ease;
+}
+.hamburger.active span:nth-child(1){
+    transform: translate(5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+    transform: translate(-5px) rotate(-45deg);
+}
+.scrolled{
+    background-color: white;
+
+}
+.scrolled .brand{
+    color: var(--c-dark);
+}
+.scrolled.nav-links li a:hover{
+    color: var(--c-brand);
+}
+.scrolled.hamburger span{
+    background-color: var(--c-dark);
+}
+@media(max-width: 768px) {
+    .nav-links{
+        position: fixed;
+        top: var(--n-height);
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 24px;
+        transition: all 0.3s ease-in-out;
+        height: 0;
+        overflow: hidden;
+        justify-content: center;
+        background-color: white;
+
+    }
+    .nav-links li a {
+        color: var(--c-dark);
+    }
+    .nav-links.active{
+        height: 170px;
+    }
+    .nav-links li {
+        padding: 10px 0;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+#hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../images/back.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    text-align: center;    
+}
+#hero h1 {
+    color:white;
+    font-size: clamp(44px, 10vw, 100px);
+    text-transform: uppercase;
+    
+}
+var options =  {
+    strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+    typeSpeed: 50,
+  };
+  var typed = new Typed('',options)
+
+ 
+
+  .scroll-to-down{
+    width: 30px;
+    height: 60px;
+    display: grid;
+    place-content:center;
+    font: size 24px;
+    color:white;
+    border:2px solid rgba(255,255,255,0.2);
+    border: radius 10px;
+    position: absolute;
+    bottom: 50px;
+    left:50%;
+    
+       
+
+  }
+  scroll-to-down .scroll-to-down {  /* Corrected typo */
+    animation: scrolltodown 2s ease infinite;
+  }
+.grid{
+    display: grid;
+    gap: 44px;
+}
+.three-col-grid{
+    grid-template-columns: repeat(3,1fr);
+}
+.service:nth-child(odd){
+    background-color: var(--c-light);
+}
+
+
+
+.scroll-to-down {
+    width: 30px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    font-size: 24px; /* Adjust font size as needed */
+    color: white; /* Adjust color as needed */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Adjust border as needed */
+    border-radius: 10px; /* Adjust border radius as needed */
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    
+    animation: scrolltodown 2s ease infinite;
+    
+  }
+  
+  @keyframes scrolltodown { 
+    0% {
+      transform: translateY(30%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(-30%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(80%);   
+  
+      opacity: 0;
+    }
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: black; /* Set the navbar background to black */
+    padding: 20px 0; /* Adjust padding if needed */
+    display: flex;
+    justify-content: space-between; /* Already set in your code */
+  }
+  
+  .navbar .Container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand {
+    color: white; /* Set brand text color to white */
+   
+    text-decoration: none;
+    width: 820px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px; /* Adjust margin between links if needed */
+  }
+  
+  .nav-links a {
+    color: white; /* Set link text color to white */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #fac562; /* Change hover color to your preference */
+  }
+ 
+  
