@@ -4,7 +4,6 @@
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
 - [Key Features](#key-features)
-- [Screenshots](#screenshots)
 - [Instructions](#instructions)
   - [Prerequisites](#prerequisites)
   - [Setup Timetable](#setup-timetable)
@@ -14,38 +13,32 @@
 
 ## Overview
 
-A Full-stack web application built using React and Spring Boot for managing student records efficiently. This system allows users to add, update, and delete student information, along with their respective departments. It ensures seamless communication between the frontend and backend, providing a user-friendly interface.
+A Full-stack web application built using React and Spring Boot for managing user records efficiently. This system allows users to add, update, and delete student information, along with their respective departments. It ensures seamless communication between the frontend and backend, providing a user-friendly interface.
 
 ---
 
 ## Tech Stack 🖥
 
-**Client:** React, Bootstrap, React Router, Axios, Toast Notifications Library  
-**Server:** Spring Boot, Spring JPA, Spring Web, MySQL  
+**Client:** React, Bootstrap, React Router, HTML, CSS, JS.
+**Server:** Spring Boot, Spring JPA, Spring Web, MySQL.
 
 ---
 
 ## Key Features 🎇
 
-- Add, update, and delete student records with their first name, last name, email, and department.  
-- View a list of students with department information.  
-- Manage departments by adding and updating their names and descriptions.  
+- Login and sign in due to user roles.
+- Add, update, and delete records.
+- View a list of users information.
+- Manage user by adding and updating their names and descriptions.
+- Sorting, filtering and search user information.
+- Download and upload documents.
+- Reset password.
+- Multi-language.
 - Integration of React for the frontend, ensuring dynamic user interfaces.  
 - Backend powered by Spring Boot, providing RESTful APIs for data manipulation.  
 - Utilizes Axios for making asynchronous HTTP requests between the frontend and backend.  
 - Implements React Router for client-side routing, ensuring a smooth user experience.  
 - Toast notifications for informing users about successful and failed actions.  
-- Utilizes custom hooks for encapsulating and reusing logic across components.  
-
----
-
-## Screenshots 🎞
-![Screenshot_1](https://github.com/LuisSalas94/Full-Stack-React-Spring-Boot-Student-Management-System/assets/57297709/49a269d1-1f95-4199-bbf4-f315fec957d5)  
-![Screenshot_2](https://github.com/LuisSalas94/Full-Stack-React-Spring-Boot-Student-Management-System/assets/57297709/6eae9e41-a16f-43fe-b748-fdb63d74e850)  
-![Screenshot_3](https://github.com/LuisSalas94/Full-Stack-React-Spring-Boot-Student-Management-System/assets/57297709/30c8b70e-f0a0-445f-ae72-788a7a23e8a8)  
-![Screenshot_4](https://github.com/LuisSalas94/Full-Stack-React-Spring-Boot-Student-Management-System/assets/57297709/1f4c3ac1-cfab-45c0-9b46-b849de22c249)  
-![Screenshot_5](https://github.com/LuisSalas94/Full-Stack-React-Spring-Boot-Student-Management-System/assets/57297709/2cd0d823-f084-4388-865a-4287693b5937)  
-![Screenshot_7](https://github.com/LuisSalas94/Full-Stack-React-Spring-Boot-Student-Management-System/assets/57297709/3913298e-b0ce-469a-9683-17872f8e6d22)  
 
 ---
 
@@ -68,8 +61,8 @@ Before running this application, ensure that you have the following installed:
 | Backend: Run                 | `$ ./mvnw spring-boot:run`                                                                          | Start the backend server.                                        |
 | Frontend: Navigate to folder | `$ cd react-frontend`                                                                               | Move to frontend folder.                                         |
 | Frontend: Install dependencies | `$ npm install`                                                                                  | Install required Node.js packages.                              |
-| Frontend: Run                | `$ npm start`                                                                                      | Start the React development server.                             |
-| Access application           | Open [http://localhost:3000](http://localhost:3000)                                                | Interact with the app in your browser.                           |
+| Frontend: Run                | `$ npm run dev`                                                                                      | Start the React development server.                             |
+| Access application           | Open [http://localhost:5173](http://localhost:5173)                                                | Interact with the app in your browser.                           |
 
 ---
 
@@ -77,4 +70,5 @@ Before running this application, ensure that you have the following installed:
 
 | **Role**       | **Username** | **Password** |
 |----------------|--------------|--------------|
-| **Default User** | `prince`     | `2002`       |
+| **Admin User** | `prince`     | `2002`       |
+| **Employer User** | `makuza`     | `2002`       |
